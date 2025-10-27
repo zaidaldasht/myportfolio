@@ -1,0 +1,136 @@
+:root {
+/* ===== Base Colors ===== */
+  --bg-color: #0D1117;              /* Main background */
+  --box-bg: #161B22;                /* Box / section background */
+  --box-hover-bg: #21262D;          /* Box hover background */
+
+  /* ===== Text ===== */
+  --text-color: #E6F1FF;            /* Primary text */
+  --text-secondary: #A8B2D1;        /* Secondary text (descriptions, small text) */
+
+  /* ===== Accent & Glow ===== */
+  --accent-color: #64FFDA;          /* Mint highlight / main accent */
+  --accent-hover: #52E0C4;          /* Slightly darker mint for hover */
+  --glow-color: rgba(100, 255, 218, 0.25);  /* Mint glow for shadows */
+
+  /* ===== Buttons ===== */
+  --btn-primary-bg: var(--accent-color);
+  --btn-primary-hover: var(--accent-hover);
+  --btn-primary-text: var(--bg-color);
+
+  --btn-secondary-border: var(--accent-color);
+  --btn-secondary-bg-hover: rgba(100, 255, 218, 0.1);
+  --btn-secondary-text: var(--accent-color);
+
+  /* ===== Transitions & Shadows ===== */
+  --transition-fast: 0.3s ease;
+  --shadow-hover: 0 0 15px var(--glow-color);
+}
+/* ==== about HOME ==== */
+.abouthome {
+    height: 75vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.abouthomeintro{
+    max-width: 600px;
+    max-height: 400px;
+    margin: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aboutphoto{
+    max-width: 400px;
+    max-height: 400px;
+    min-width: 300px;
+    min-height: 200px;
+    width: 50%;
+    height: 60%;
+    margin: 3%;
+
+
+}
+
+.abouthome img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    box-shadow: var(--shadow-hover);
+    margin-bottom: 20px;
+    border: 0px solid white;
+    border-radius: 10%;
+}
+
+.abouthome h2 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: var(--accent-color);
+}
+
+.btn {
+    display: inline-block;
+    background: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    margin: 5%;
+}
+
+.btn:hover {
+    background: var(--box-hover-bg);
+    color: var(--accent-color);
+}
+
+
+/* home */
+#demo-canvas {
+    position: fixed;     /* stays fixed while scrolling */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;         /* behind all content */
+    display: block;
+}
+
+/* Header content centered */
+.large-header {
+    position: relative;
+    background: transparent; /* let canvas show through */
+}
+
+
+
+.main-title .thin {
+    font-weight: 200;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .demo-1 .main-title {
+		font-size: 3em;
+	}
+
+    .aboutphoto{
+        margin: 50px;
+        height: 40%;
+    }
+
+
+}

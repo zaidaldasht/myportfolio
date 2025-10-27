@@ -1,0 +1,346 @@
+:root {
+    /* ===== Base Colors ===== */
+    --bg-color: #0D1117;
+    /* Main background */
+    --box-bg: #161B22;
+    /* Box / section background */
+    --box-hover-bg: #21262D;
+    /* Box hover background */
+
+    /* ===== Text ===== */
+    --text-color: #E6F1FF;
+    /* Primary text */
+    --text-secondary: #A8B2D1;
+    /* Secondary text (descriptions, small text) */
+
+    /* ===== Accent & Glow ===== */
+    --accent-color: #64FFDA;
+    /* Mint highlight / main accent */
+    --accent-hover: #52E0C4;
+    /* Slightly darker mint for hover */
+    --glow-color: rgba(100, 255, 218, 0.25);
+    /* Mint glow for shadows */
+
+    /* ===== Buttons ===== */
+    --btn-primary-bg: var(--accent-color);
+    --btn-primary-hover: var(--accent-hover);
+    --btn-primary-text: var(--bg-color);
+
+    --btn-secondary-border: var(--accent-color);
+    --btn-secondary-bg-hover: rgba(100, 255, 218, 0.1);
+    --btn-secondary-text: var(--accent-color);
+
+    /* ===== Transitions & Shadows ===== */
+    --transition-fast: 0.3s ease;
+    --shadow-hover: 0 0 15px var(--glow-color);
+}
+
+/* ==== GENERAL STYLES ==== */
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    
+}
+
+/* ==== CONTAINER ==== */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ==== HEADER ==== */
+header {
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    height: 8vh;
+
+}
+
+.logo {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin: 15px;
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    font-family: 'Satisfy', cursive;
+}
+
+.logo a{
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo bracket {
+    font-size: 5rem;
+
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text-color);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+
+.textlink a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: large;
+    font-weight: bold;
+    
+}
+
+.textlink a:hover {
+    color: var(--text-color);
+}
+
+/* ==== SECTIONS ==== */
+.section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 3px;
+    background: var(--accent-color);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+p {
+    max-width: 1000px;
+    margin: 0 auto 20px auto;
+}
+
+/* ==== LISTS (Awards, Certificates) ==== */
+.awards ul {
+    list-style: none;
+    padding: 0;
+}
+
+.awards ul li {
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+/* ==== FOOTER ==== */
+footer {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    color: var(--text-color);
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--btn-primary-hover);
+}
+
+.pdf{
+    height: 1000px;
+}
+
+/* ===== Back to Top Button ===== */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    background: var(--accent-color);
+    color: var(--bg-color);
+    border: none;
+    outline: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--glow-color);
+    font-size: 1.2rem;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#backToTop:hover {
+    background: var(--accent-hover);
+    transform: scale(1.1);
+}
+
+/* Show when active */
+#backToTop.show {
+    display: flex;
+}
+
+/* ===== tech stack ===== */
+.tech-stack {
+  text-align: center;
+  padding: 60px 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.tech-stack img .dark-logo {
+  filter: brightness(2) saturate(1.5);
+}
+
+.logo-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.logos {
+  display: flex;
+  gap: 50px;
+  animation: scroll 25s linear infinite;
+}
+
+.logos img {
+  height: 90px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logos img:hover {
+  transform: scale(1.2);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+
+    /* PDF embed height */
+    .pdf {
+        height: 500px;
+    }
+
+    /* Hamburger menu button */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Nav links */
+    .nav-links {
+        position: absolute;
+        top: 10%;
+        right: 0;
+        background: var(--bg-color);
+        flex-direction: column;
+        width: 100px;
+        padding: 1rem;
+        box-shadow: var(--shadow-hover);
+        display: none; /* hide by default on mobile */
+        border-radius: 0 0 8px 8px;
+        z-index: 1000;
+    }
+
+    .nav-links.show {
+
+        display: flex; 
+
+    }
+
+    .nav-links li {
+        margin-bottom: 1rem;
+    }
+
+    .nav-links li:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Skills list - vertical on mobile */
+    .skills-list {
+        flex-direction: column;
+    }
+
+    /* Items spacing adjustments */
+    .experience-item,
+    .project-item,
+    .education-item {
+        margin: 20px 10px;
+    }
+
+    /* Projects layout */
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+    
+.logos img {
+  height: 50px;
+}
+
+.logos {
+  gap: 10px;
+}
+}
