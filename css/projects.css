@@ -190,7 +190,6 @@ button {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
-  margin-bottom: 20px;
 }
 
 button:hover {
@@ -298,7 +297,7 @@ button:hover {
   }
 
   .project-box {
-    width: 78%;
+    width: 75%;
     height: auto;
   }
 

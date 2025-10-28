@@ -65,7 +65,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 1rem;
+    padding: 0.5rem 0.2rem;
     height: 8vh;
 
 }
@@ -73,7 +73,7 @@ header {
 .logo {
     font-size: 2rem;
     letter-spacing: 1px;
-    margin: 15px;
+    margin-left: 15px;
     color: var(--accent-color);
     display: flex;
     align-items: center;
@@ -337,7 +337,7 @@ footer {
 
     
 .logos img {
-  height: 50px;
+  height: 60px;
 }
 
 .logos {
